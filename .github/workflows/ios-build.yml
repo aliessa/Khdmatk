@@ -1,4 +1,4 @@
-name: Build iOS App & Simulator
+name: Build iOS App (IPA & Simulator)
 
 on:
   push:
@@ -6,43 +6,66 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    name: Build iOS Simulator App
+  build-ios:
+    name: Build iOS IPA & Simulator App
     runs-on: macos-14
 
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Select Xcode
+      - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_15.4.app
 
-      - name: Build for iOS Simulator (No Mac or Paid Account Needed)
+      # 1. Build actual .ipa package (for direct installation / OTA)
+      - name: Build and Package iOS .IPA
+        run: |
+          mkdir -p build_output
+          # Build archive without signing requirements
+          xcodebuild archive \
+            -project Khdmatk.xcodeproj \
+            -scheme Khdmatk \
+            -configuration Release \
+            -archivePath build_output/Khdmatk.xcarchive \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY=""
+
+          # Package .app into standard iOS Payload/ .ipa format
+          mkdir -p Payload
+          cp -r "build_output/Khdmatk.xcarchive/Products/Applications/Khdmatk.app" Payload/
+          zip -r "build_output/Khdmatk.ipa" Payload
+          rm -rf Payload
+
+      # 2. Build Simulator version (for browser testing on Appetize.io)
+      - name: Build Simulator App
         run: |
           xcodebuild build \
             -project Khdmatk.xcodeproj \
             -scheme Khdmatk \
             -configuration Debug \
             -destination 'generic/platform=iOS Simulator' \
-            -derivedDataPath build \
+            -derivedDataPath sim_build \
             CODE_SIGNING_ALLOWED=NO
 
-      - name: Locate & Compress Simulator App
-        run: |
-          mkdir -p output
-          APP_PATH=$(find build/Build/Products/Debug-iphonesimulator -name "Khdmatk.app" | head -n 1)
+          APP_PATH=$(find sim_build/Build/Products/Debug-iphonesimulator -name "Khdmatk.app" | head -n 1)
           if [ -d "$APP_PATH" ]; then
-            echo "Found App at $APP_PATH"
             cd "$(dirname "$APP_PATH")"
-            zip -r "$GITHUB_WORKSPACE/output/Khdmatk-Simulator.app.zip" "Khdmatk.app"
-          else
-            echo "App not found!"
-            exit 1
+            zip -r "$GITHUB_WORKSPACE/build_output/Khdmatk-Simulator.app.zip" "Khdmatk.app"
           fi
 
-      - name: Upload Simulator Build Artifact (For Appetize.io)
+      # 3. Upload actual .ipa file
+      - name: Upload Khdmatk.ipa Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Khdmatk-iOS-IPA
+          path: build_output/Khdmatk.ipa
+          retention-days: 30
+
+      # 4. Upload Simulator artifact
+      - name: Upload Simulator App Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Khdmatk-Simulator-Build
-          path: output/Khdmatk-Simulator.app.zip
-          retention-days: 14
+          path: build_output/Khdmatk-Simulator.app.zip
+          retention-days: 30

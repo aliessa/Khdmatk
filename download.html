@@ -37,7 +37,7 @@
         }
         .container {
             width: 100%;
-            max-width: 480px;
+            max-width: 500px;
             background: var(--glass-bg);
             border: 1px solid var(--glass-border);
             border-radius: 28px;
@@ -79,7 +79,7 @@
         p.subtitle {
             font-size: 0.95rem;
             color: #9fceb6;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             line-height: 1.5;
         }
         .device-badge {
@@ -91,13 +91,13 @@
             font-weight: 700;
             padding: 4px 14px;
             border-radius: 20px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         .btn-group {
             display: flex;
             flex-direction: column;
-            gap: 14px;
-            margin-bottom: 24px;
+            gap: 12px;
+            margin-bottom: 20px;
         }
         .btn {
             display: flex;
@@ -122,6 +122,17 @@
             transform: translateY(-2px);
             box-shadow: 0 12px 30px rgba(0, 168, 107, 0.6);
         }
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-size: 0.92rem;
+            padding: 12px 16px;
+        }
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.14);
+            transform: translateY(-2px);
+        }
         .btn-android {
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(255, 255, 255, 0.2);
@@ -132,53 +143,21 @@
             transform: translateY(-2px);
         }
         .btn svg {
-            width: 26px;
-            height: 26px;
+            width: 24px;
+            height: 24px;
             fill: currentColor;
             flex-shrink: 0;
         }
-        .steps-box {
+        .info-box {
             background: rgba(0, 0, 0, 0.25);
             border-radius: 18px;
-            padding: 18px 16px;
+            padding: 16px;
             text-align: right;
             border: 1px solid rgba(255, 255, 255, 0.06);
-            margin-top: 10px;
-        }
-        .steps-title {
-            font-size: 0.85rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .step-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
+            margin-top: 14px;
             font-size: 0.85rem;
             color: #cbd5e1;
-            margin-bottom: 10px;
-            line-height: 1.4;
-        }
-        .step-item:last-child {
-            margin-bottom: 0;
-        }
-        .step-num {
-            width: 22px;
-            height: 22px;
-            background: rgba(0, 196, 126, 0.2);
-            color: var(--accent);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 900;
-            flex-shrink: 0;
-            margin-top: 1px;
+            line-height: 1.5;
         }
         .footer-note {
             margin-top: 24px;
@@ -204,40 +183,32 @@
     <div id="deviceBadge" class="device-badge">جاري التعرف على نوع هاتفك...</div>
 
     <div class="btn-group">
-        <!-- iOS Download Button -->
-        <a id="iosBtn" href="khdmatk.mobileconfig" class="btn btn-ios">
-            <svg viewBox="0 0 384 512">
-                <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
-            </svg>
-            <span>تثبيت تطبيق الآيفون (iOS)</span>
+        <!-- 1. Apple Direct Over-The-Air Install (Native iOS App) -->
+        <a id="iosOtaBtn" href="itms-services://?action=download-manifest&url=https://khdmatk.store/manifest.plist" class="btn btn-ios">
+            <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span>تثبيت تطبيق الآيفون المباشر (OTA)</span>
         </a>
 
-        <!-- Android Download Button -->
+        <!-- 2. Download Raw IPA (For Sideloadly / AltStore) -->
+        <a id="iosIpaBtn" href="Khdmatk.ipa" class="btn btn-secondary" download>
+            <svg viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span>تنزيل ملف البرنامج الأصلي للآيفون (.IPA)</span>
+        </a>
+
+        <!-- 3. iOS Profile WebClip -->
+        <a id="iosProfileBtn" href="khdmatk.mobileconfig" class="btn btn-secondary">
+            <span>تثبيت عبر ملف التعريف السريع (.mobileconfig)</span>
+        </a>
+
+        <!-- 4. Android APK -->
         <a id="androidBtn" href="Khdmatk.apk" class="btn btn-android" download>
-            <svg viewBox="0 0 576 512">
-                <path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.9-83a10,10,0,1,0-17.27-10l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10l47.9,83C64.68,205.9,8.6,290.87,0,391.88H576C567.4,290.87,511.32,205.9,429.15,157.45"/>
-            </svg>
+            <svg viewBox="0 0 576 512"><path d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.9-83a10,10,0,1,0-17.27-10l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10l47.9,83C64.68,205.9,8.6,290.87,0,391.88H576C567.4,290.87,511.32,205.9,429.15,157.45"/></svg>
             <span>تحميل تطبيق الأندرويد (APK)</span>
         </a>
     </div>
 
-    <!-- Visual Installation Steps for iOS -->
-    <div id="iosSteps" class="steps-box">
-        <div class="steps-title">
-            <span>📱 طريقة تثبيت تطبيق الآيفون بثلاث خطوات:</span>
-        </div>
-        <div class="step-item">
-            <span class="step-num">1</span>
-            <span>اضغط على زر <b>"تثبيت تطبيق الآيفون"</b> أعلاه، ثم اضغط <b>السماح (Allow)</b>.</span>
-        </div>
-        <div class="step-item">
-            <span class="step-num">2</span>
-            <span>افتح <b>إعدادات الآيفون (Settings)</b> وستجد في الأعلى: <b>تم تنزيل ملف التعريف</b>.</span>
-        </div>
-        <div class="step-item">
-            <span class="step-num">3</span>
-            <span>اضغط <b>تثبيت (Install)</b> وسيظهر التطبيق فوراً على شاشتك الرئيسية!</span>
-        </div>
+    <div class="info-box">
+        💡 <b>ملاحظة لمستخدمي الآيفون:</b> عند الضغط على "تثبيت تطبيق الآيفون المباشر"، ستظهر لك رسالة من نظام iOS لتأكيد التثبيت، وسيظهر التطبيق مباشرة على شاشتك الرئيسية.
     </div>
 
     <div class="footer-note">
@@ -251,25 +222,17 @@
         var isIOS = /iPad|iPhone|iPod/.test(ua) && !window.MSStream;
         var isAndroid = /android/i.test(ua);
         var badge = document.getElementById('deviceBadge');
-        var iosBtn = document.getElementById('iosBtn');
         var androidBtn = document.getElementById('androidBtn');
-        var iosSteps = document.getElementById('iosSteps');
 
         if (isIOS) {
-            badge.innerText = '✨ تم التعرف: أنت تستخدم جهاز آيفون (Apple iOS)';
-            iosBtn.style.order = '-1';
-            iosSteps.style.display = 'block';
+            badge.innerText = '✨ جهازك: آيفون (Apple iOS)';
         } else if (isAndroid) {
-            badge.innerText = '✨ تم التعرف: أنت تستخدم جهاز أندرويد (Android)';
+            badge.innerText = '✨ جهازك: أندرويد (Android)';
             androidBtn.classList.remove('btn-android');
             androidBtn.classList.add('btn-ios');
-            iosBtn.classList.remove('btn-ios');
-            iosBtn.classList.add('btn-android');
             androidBtn.style.order = '-1';
-            iosSteps.style.display = 'none';
         } else {
-            badge.innerText = '💻 مرحباً بك — اختر نسختك المناسبة للتحميل';
-            iosSteps.style.display = 'block';
+            badge.innerText = '💻 مرحباً بك — اختر نسختك للتحميل';
         }
     })();
 </script>
