@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -14,11 +14,11 @@ iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 			<key>IsRemovable</key>
 			<true/>
 			<key>Label</key>
-			<string>Ø®Ø¯Ù…Ø§ØªÙƒ</string>
+			<string>خدماتك</string>
 			<key>PayloadDescription</key>
-			<string>ØªØ·Ø¨ÙŠÙ‚ Ù…Ù†ØµØ© Ø®Ø¯Ù…Ø§ØªÙƒ Ù„Ù„ØªØ¬Ø§Ø±Ø© ÙˆØ§Ù„ØªÙˆØµÙŠÙ„ ÙˆØ§Ù„Ø®Ø¯Ù…Ø§Øª</string>
+			<string>تطبيق منّصة خدماتك للتجارة والخدمات</string>
 			<key>PayloadDisplayName</key>
-			<string>Ø®Ø¯Ù…Ø§ØªÙƒ</string>
+			<string>خدماتك</string>
 			<key>PayloadIdentifier</key>
 			<string>store.khdmatk.webclip</string>
 			<key>PayloadType</key>
@@ -34,13 +34,13 @@ iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
 		</dict>
 	</array>
 	<key>PayloadDescription</key>
-	<string>ØªØ«Ø¨ÙŠØª ØªØ·Ø¨ÙŠÙ‚ Ø®Ø¯Ù…Ø§ØªÙƒ Ø¹Ù„Ù‰ Ø§Ù„Ø´Ø§Ø´Ø© Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©</string>
+	<string>تثبيت تطبيق خدماتك على الشاشة الرئيسية</string>
 	<key>PayloadDisplayName</key>
-	<string>ØªØ·Ø¨ÙŠÙ‚ Ø®Ø¯Ù…Ø§ØªÙƒ</string>
+	<string>تطبيق خدماتك</string>
 	<key>PayloadIdentifier</key>
 	<string>store.khdmatk.profile</string>
 	<key>PayloadOrganization</key>
-	<string>Ø®Ø¯Ù…Ø§ØªÙƒ - Khdmatk</string>
+	<string>خدماتك - Khdmatk</string>
 	<key>PayloadRemovalDisallowed</key>
 	<false/>
 	<key>PayloadType</key>
