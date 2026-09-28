@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1010001 /* KhdmatkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020001 /* KhdmatkApp.swift */; };
+		A1010002 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020002 /* AppDelegate.swift */; };
+		A1010003 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020003 /* AppConstants.swift */; };
+		A1010004 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020004 /* HapticManager.swift */; };
+		A1010005 /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020005 /* NetworkMonitor.swift */; };
+		A1010006 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020006 /* LocationManager.swift */; };
+		A1010007 /* AppRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020007 /* AppRole.swift */; };
+		A1010008 /* NavigationTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020008 /* NavigationTab.swift */; };
+		A1010009 /* QuickActionItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020009 /* QuickActionItem.swift */; };
+		A1010010 /* InjectedScripts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020010 /* InjectedScripts.swift */; };
+		A1010011 /* WebScriptBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020011 /* WebScriptBridge.swift */; };
+		A1010012 /* WebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020012 /* WebViewModel.swift */; };
+		A1010013 /* LoadingProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020013 /* LoadingProgressBar.swift */; };
+		A1010014 /* RoleSelectorBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020014 /* RoleSelectorBar.swift */; };
+		A1010015 /* NativeNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020015 /* NativeNavBar.swift */; };
+		A1010016 /* NativeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020016 /* NativeTabBar.swift */; };
+		A1010017 /* OfflineBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020017 /* OfflineBannerView.swift */; };
+		A1010018 /* QuickActionsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020018 /* QuickActionsSheet.swift */; };
+		A1010019 /* SettingsSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020019 /* SettingsSheet.swift */; };
+		A1010020 /* WebViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020020 /* WebViewContainer.swift */; };
+		A1010021 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1020021 /* MainView.swift */; };
+		A1010022 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A1020022 /* Assets.xcassets */; };
+		A1010023 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1020023 /* LaunchScreen.storyboard */; };
+		A1010024 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1020024 /* WebKit.framework */; };
+		A1010025 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1020025 /* Network.framework */; };
+		A1010026 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1020026 /* CoreLocation.framework */; };
+		A1010027 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1020027 /* UserNotifications.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1000001 /* Khdmatk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Khdmatk.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1020001 /* KhdmatkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhdmatkApp.swift; sourceTree = "<group>"; };
+		A1020002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A1020003 /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		A1020004 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
+		A1020005 /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		A1020006 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		A1020007 /* AppRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRole.swift; sourceTree = "<group>"; };
+		A1020008 /* NavigationTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTab.swift; sourceTree = "<group>"; };
+		A1020009 /* QuickActionItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionItem.swift; sourceTree = "<group>"; };
+		A1020010 /* InjectedScripts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedScripts.swift; sourceTree = "<group>"; };
+		A1020011 /* WebScriptBridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScriptBridge.swift; sourceTree = "<group>"; };
+		A1020012 /* WebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewModel.swift; sourceTree = "<group>"; };
+		A1020013 /* LoadingProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingProgressBar.swift; sourceTree = "<group>"; };
+		A1020014 /* RoleSelectorBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoleSelectorBar.swift; sourceTree = "<group>"; };
+		A1020015 /* NativeNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeNavBar.swift; sourceTree = "<group>"; };
+		A1020016 /* NativeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeTabBar.swift; sourceTree = "<group>"; };
+		A1020017 /* OfflineBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineBannerView.swift; sourceTree = "<group>"; };
+		A1020018 /* QuickActionsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickActionsSheet.swift; sourceTree = "<group>"; };
+		A1020019 /* SettingsSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSheet.swift; sourceTree = "<group>"; };
+		A1020020 /* WebViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewContainer.swift; sourceTree = "<group>"; };
+		A1020021 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		A1020022 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A1020023 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A1020024 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		A1020025 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		A1020026 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A1020027 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		A1020028 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1020029 /* Khdmatk.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Khdmatk.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1030001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1010024 /* WebKit.framework in Frameworks */,
+				A1010025 /* Network.framework in Frameworks */,
+				A1010026 /* CoreLocation.framework in Frameworks */,
+				A1010027 /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1040001 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				A1040002 /* Khdmatk */,
+				A1040009 /* Frameworks */,
+				A1040010 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A1040002 /* Khdmatk */ = {
+			isa = PBXGroup;
+			children = (
+				A1040003 /* App */,
+				A1040004 /* Core */,
+				A1040005 /* Models */,
+				A1040006 /* Bridge */,
+				A1040007 /* ViewModels */,
+				A1040008 /* Views */,
+				A1040011 /* Resources */,
+				A1020029 /* Khdmatk.entitlements */,
+			);
+			path = Khdmatk;
+			sourceTree = "<group>";
+		};
+		A1040003 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A1020001 /* KhdmatkApp.swift */,
+				A1020002 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A1040004 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A1020003 /* AppConstants.swift */,
+				A1020004 /* HapticManager.swift */,
+				A1020005 /* NetworkMonitor.swift */,
+				A1020006 /* LocationManager.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A1040005 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A1020007 /* AppRole.swift */,
+				A1020008 /* NavigationTab.swift */,
+				A1020009 /* QuickActionItem.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A1040006 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				A1020010 /* InjectedScripts.swift */,
+				A1020011 /* WebScriptBridge.swift */,
+			);
+			path = Bridge;
+			sourceTree = "<group>";
+		};
+		A1040007 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				A1020012 /* WebViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		A1040008 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1020013 /* LoadingProgressBar.swift */,
+				A1020014 /* RoleSelectorBar.swift */,
+				A1020015 /* NativeNavBar.swift */,
+				A1020016 /* NativeTabBar.swift */,
+				A1020017 /* OfflineBannerView.swift */,
+				A1020018 /* QuickActionsSheet.swift */,
+				A1020019 /* SettingsSheet.swift */,
+				A1020020 /* WebViewContainer.swift */,
+				A1020021 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1040011 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A1020022 /* Assets.xcassets */,
+				A1020023 /* LaunchScreen.storyboard */,
+				A1020028 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A1040009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1020024 /* WebKit.framework */,
+				A1020025 /* Network.framework */,
+				A1020026 /* CoreLocation.framework */,
+				A1020027 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1040010 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1000001 /* Khdmatk.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1050001 /* Khdmatk */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1060001 /* Build configuration list for PBXNativeTarget "Khdmatk" */;
+			buildPhases = (
+				A1070001 /* Sources */,
+				A1030001 /* Frameworks */,
+				A1080001 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Khdmatk;
+			productName = Khdmatk;
+			productReference = A1000001 /* Khdmatk.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1090001 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					A1050001 = {
+						CreatedOnToolsVersion = 15.0;
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = A1060002 /* Build configuration list for PBXProject "Khdmatk" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = ar;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				ar,
+				en,
+				Base,
+			);
+			mainGroup = A1040001 /* Root */;
+			productRefGroup = A1040010 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1050001 /* Khdmatk */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1080001 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1010022 /* Assets.xcassets in Resources */,
+				A1010023 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1070001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1010001 /* KhdmatkApp.swift in Sources */,
+				A1010002 /* AppDelegate.swift in Sources */,
+				A1010003 /* AppConstants.swift in Sources */,
+				A1010004 /* HapticManager.swift in Sources */,
+				A1010005 /* NetworkMonitor.swift in Sources */,
+				A1010006 /* LocationManager.swift in Sources */,
+				A1010007 /* AppRole.swift in Sources */,
+				A1010008 /* NavigationTab.swift in Sources */,
+				A1010009 /* QuickActionItem.swift in Sources */,
+				A1010010 /* InjectedScripts.swift in Sources */,
+				A1010011 /* WebScriptBridge.swift in Sources */,
+				A1010012 /* WebViewModel.swift in Sources */,
+				A1010013 /* LoadingProgressBar.swift in Sources */,
+				A1010014 /* RoleSelectorBar.swift in Sources */,
+				A1010015 /* NativeNavBar.swift in Sources */,
+				A1010016 /* NativeTabBar.swift in Sources */,
+				A1010017 /* OfflineBannerView.swift in Sources */,
+				A1010018 /* QuickActionsSheet.swift in Sources */,
+				A1010019 /* SettingsSheet.swift in Sources */,
+				A1010020 /* WebViewContainer.swift in Sources */,
+				A1010021 /* MainView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A10A0001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A10A0002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDEFINED_VARIABLES = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = "wholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A10A0003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Khdmatk/Khdmatk.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Khdmatk/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = store.khdmatk.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A10A0004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Khdmatk/Khdmatk.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Khdmatk/Resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = store.khdmatk.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1060001 /* Build configuration list for PBXNativeTarget "Khdmatk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10A0003 /* Debug */,
+				A10A0004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1060002 /* Build configuration list for PBXProject "Khdmatk" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A10A0001 /* Debug */,
+				A10A0002 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A1090001 /* Project object */;
+}

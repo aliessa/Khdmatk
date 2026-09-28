@@ -1,0 +1,19 @@
+# Xcode
+.DS_Store
+*/build/*
+*.moved-aside
+*.xcuserstate
+*.xcscmblueprint
+
+## User settings
+xcuserdata/
+
+## Build generated
+DerivedData/
+.build/
+
+## Various build artifacts
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM

@@ -1,0 +1,25 @@
+name: Khdmatk
+options:
+  bundleIdPrefix: store.khdmatk
+  deploymentTarget:
+    iOS: "15.0"
+  xcodeVersion: "15.0"
+settings:
+  SWIFT_VERSION: "5.0"
+  CODE_SIGN_STYLE: Automatic
+targets:
+  Khdmatk:
+    type: application
+    platform: iOS
+    deploymentTarget: "15.0"
+    sources:
+      - path: Khdmatk
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: store.khdmatk.app
+      PRODUCT_NAME: Khdmatk
+      INFOPLIST_FILE: Khdmatk/Resources/Info.plist
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+      CODE_SIGN_ENTITLEMENTS: Khdmatk/Khdmatk.entitlements
+      TARGETED_DEVICE_FAMILY: "1,2"
+      ENABLE_PREVIEWS: YES
