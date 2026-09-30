@@ -21,14 +21,14 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.5'
 
-      - name: Build Android APK with Gradle
+      - name: Build Android APK
         run: |
           cd android
-          chmod +x gradlew || true
-          gradle wrapper
-          ./gradlew assembleDebug --stacktrace
+          gradle assembleDebug --no-daemon --stacktrace
 
       - name: Locate & Rename APK
         run: |
