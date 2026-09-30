@@ -33,12 +33,13 @@ jobs:
       - name: Locate & Rename APK
         run: |
           mkdir -p output
-          APK_FILE=$(find android/app/build/outputs/apk/ -name "*.apk" | head -n 1)
+          APK_FILE=$(find android/app/build/outputs/apk/debug -name "*.apk" | head -n 1)
           if [ -f "$APK_FILE" ]; then
             echo "Found APK at $APK_FILE"
             cp "$APK_FILE" output/Khdmatk.apk
           else
-            echo "APK not found!"
+            echo "Searching all outputs..."
+            find android/app/build/outputs/ -type f || true
             exit 1
           fi
 
