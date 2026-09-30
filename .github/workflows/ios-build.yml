@@ -5,6 +5,9 @@ on:
     branches: [ master, main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build-ios:
     name: Build iOS IPA & Simulator App
@@ -17,11 +20,10 @@ jobs:
       - name: Select Xcode Version
         run: sudo xcode-select -s /Applications/Xcode_15.4.app
 
-      # 1. Build actual .ipa package (for direct installation / OTA)
+      # 1. Build and package actual .ipa
       - name: Build and Package iOS .IPA
         run: |
           mkdir -p build_output
-          # Build archive without signing requirements
           xcodebuild archive \
             -project Khdmatk.xcodeproj \
             -scheme Khdmatk \
@@ -31,13 +33,12 @@ jobs:
             CODE_SIGNING_REQUIRED=NO \
             CODE_SIGN_IDENTITY=""
 
-          # Package .app into standard iOS Payload/ .ipa format
           mkdir -p Payload
           cp -r "build_output/Khdmatk.xcarchive/Products/Applications/Khdmatk.app" Payload/
           zip -r "build_output/Khdmatk.ipa" Payload
           rm -rf Payload
 
-      # 2. Build Simulator version (for browser testing on Appetize.io)
+      # 2. Build Simulator version
       - name: Build Simulator App
         run: |
           xcodebuild build \
@@ -54,7 +55,7 @@ jobs:
             zip -r "$GITHUB_WORKSPACE/build_output/Khdmatk-Simulator.app.zip" "Khdmatk.app"
           fi
 
-      # 3. Upload actual .ipa file
+      # 3. Upload Artifacts
       - name: Upload Khdmatk.ipa Artifact
         uses: actions/upload-artifact@v4
         with:
@@ -62,10 +63,24 @@ jobs:
           path: build_output/Khdmatk.ipa
           retention-days: 30
 
-      # 4. Upload Simulator artifact
       - name: Upload Simulator App Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Khdmatk-Simulator-Build
           path: build_output/Khdmatk-Simulator.app.zip
           retention-days: 30
+
+      # 4. Create Public Release with Direct Download Links
+      - name: Release Khdmatk.ipa on GitHub Releases
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/main'
+        with:
+          tag_name: v1.0.0
+          name: "Khdmatk iOS App v1.0.0"
+          draft: false
+          prerelease: false
+          files: |
+            build_output/Khdmatk.ipa
+            build_output/Khdmatk-Simulator.app.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
